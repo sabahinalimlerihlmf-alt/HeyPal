@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<title>HeyPal – Bilezik</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body { margin:0; padding:0; font-family:'Poppins',sans-serif; background: linear-gradient(135deg, #f7971e, #ffd200); }
+.container { max-width:700px; margin:50px auto; background:#fff; border-radius:25px; padding:30px; box-shadow:0 15px 40px rgba(0,0,0,0.2); text-align:center;}
+h1 { color:#2E86C1; margin-bottom:30px; font-size:36px; opacity:0; transform:translateY(-20px); animation: fadeInUp 0.8s forwards;}
+.block { background:#e67e22; color:#fff; margin:15px 0; padding:15px 20px; border-radius:20px; font-weight:600; display:flex; align-items:center; gap:10px; opacity:0; transform:translateY(30px); transition: transform 0.3s, box-shadow 0.3s; }
+.block:hover { transform: scale(1.03); box-shadow:0 10px 25px rgba(0,0,0,0.2);}
+nav { margin-bottom:20px; }
+nav a { margin:0 10px; color:#3498db; text-decoration:none; font-weight:600; }
+nav a:hover { text-decoration: underline;}
+img { width:80px; margin-bottom:20px; opacity:0; transform: translateY(-20px); animation: fadeInUp 1s forwards; animation-delay:0.3s; }
+@keyframes fadeInUp { to { opacity:1; transform:translateY(0); } }
+</style>
+</head>
+<body>
+<div class="container">
+<img src="emblem.png" alt="HeyPal Emblem">
+<nav>
+<a href="index.html">Ana Səhifə</a> |
+<a href="profile.html">Profil</a> |
+<a href="medical.html">Tibbi Məlumatlar</a>
+</nav>
+<h1>HeyPal – Ağıllı Tibbi Təhlükəsizlik Bileziyi</h1>
+<div class="block"><i class="fas fa-qrcode"></i>QR kod ilə tibbi məlumatlar</div>
+<div class="block"><i class="fas fa-map-marker-alt"></i>GPS izləmə və təhlükəsiz zona</div>
+<div class="block"><i class="fas fa-bell"></i>SOS düyməsi və yıxılma aşkarlanması</div>
+<div class="block"><i class="fas fa-heartbeat"></i>AI sağlamlıq monitorinqi</div>
+<div class="block"><i class="fas fa-hospital"></i>RFID xəstəxana və aptek girişi</div>
+<div class="block"><i class="fas fa-lightbulb"></i>Bilezik müstəqil işləyir, smartfon tələb olunmur</div>
+</div>
+
+<script>
+const blocks = document.querySelectorAll('.block');
+blocks.forEach((block, i) => {
+    setTimeout(() => {
+        block.style.opacity='1';
+        block.style.transform='translateY(0)';
+    }, 200*(i+1));
+});
+</script>
+</body>
+</html>
