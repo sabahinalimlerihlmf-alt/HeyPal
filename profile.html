@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<title>Xəstə Profili – Lalə İsmayılova</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body { margin:0; padding:0; font-family:'Poppins',sans-serif; background: linear-gradient(to right, #ffecd2, #fcb69f); }
+.container { max-width:500px; margin:50px auto; padding:30px; background:#fff; border-radius:25px; box-shadow:0 15px 40px rgba(0,0,0,0.2); text-align:center; }
+h1 { font-size:36px; color:#2E86C1; margin-bottom:30px; opacity:0; transform: translateY(-20px); animation: fadeInUp 0.8s forwards; }
+nav { margin-bottom:20px; }
+nav a { margin:0 10px; text-decoration:none; color:#3498db; font-weight:600; }
+nav a:hover { text-decoration: underline; }
+.block { background:#3498db; color:#fff; margin:15px 0; padding:15px 20px; border-radius:20px; font-weight:600; display:flex; align-items:center; gap:10px; opacity:0; transform: translateY(30px); transition: transform 0.3s, box-shadow 0.3s; }
+.block:hover { transform: scale(1.03); box-shadow:0 10px 25px rgba(0,0,0,0.2); }
+@keyframes fadeInUp { to { opacity:1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+<div class="container">
+<nav>
+<a href="index.html">Ana Səhifə</a> |
+<a href="medical.html">Tibbi Məlumatlar</a> |
+<a href="bracelet.html">Bilezik</a>
+</nav>
+<h1>Xəstə Profili</h1>
+<div class="block"><i class="fas fa-user"></i>Ad, Soyad: Lalə İsmayılova</div>
+<div class="block"><i class="fas fa-birthday-cake"></i>Yaş: 61</div>
+<div class="block"><i class="fas fa-ruler-vertical"></i>Boy: 170 cm</div>
+<div class="block"><i class="fas fa-weight"></i>Çəki: 80 kg</div>
+<div class="block"><i class="fas fa-tint"></i>Qan qrupu: A+</div>
+<div class="block"><i class="fas fa-allergies"></i>Allergiyalar: qoz-fındıq, sitrus meyvələri</div>
+<div class="block"><i class="fas fa-phone"></i>Təcili əlaqə: +994 50 123 45 67</div>
+</div>
+
+<script>
+const blocks = document.querySelectorAll('.block');
+blocks.forEach((block, i) => {
+    setTimeout(() => {
+        block.style.opacity='1';
+        block.style.transform='translateY(0)';
+    }, 200*(i+1));
+});
+</script>
+</body>
+</html>
